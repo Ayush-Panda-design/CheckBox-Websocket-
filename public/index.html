@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Realtime Checkbox Grid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Grid<span>.</span>Nova</h1>
+    <div class="header-right">
+      <!-- live checked counter -->
+      <div class="counter-pill">
+        <strong id="checkedCount"></strong> 
+      </div>
+      <!-- connection status -->
+      <div class="status-group">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusLabel">Connecting…</span>
+      </div>
+      <button id="resetBtn">↺ Reset</button>
+    </div>
+  </div>
+
+  <div class="grid-container" id="gridContainer"></div>
+
+  <!-- optional footer stats bar -->
+  <div class="footer-bar">
+    <span class="footer-stat"> <strong></strong></span>
+    <span class="footer-stat"> <strong id="latencyStat">—</strong></span>
+    <span class="footer-stat"><strong id="upsStat">—</strong></span>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
